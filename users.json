@@ -1,0 +1,71 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "fullName": "Eswar",
+      "email": "eswar@gmail.com",
+      "password": "12345",
+      "contact_no": 1231323,
+      "address": "dfsfsd",
+      "dob": "121212",
+      "aadhaar": 23131231,
+      "accountType": "savings",
+      "balance": 0,
+      "accountNumber": 1,
+      "Transactions_array": []
+    },
+    {
+      "fullName": "fsdfsd",
+      "email": "sdfsf@gmail.com",
+      "password": "dfsfsd",
+      "contact_no": "9811616516",
+      "address": "dfssf",
+      "dob": "fsdfs",
+      "aadhaar": "dfsdf",
+      "accountType": "savings",
+      "id": 2
+    },
+    {
+      "fullName": "dfs",
+      "email": "sdfs@gmail.com",
+      "password": "sdfs",
+      "contact_no": "fsdf",
+      "address": "fsf",
+      "dob": "fsf",
+      "aadhaar": "sdfsf",
+      "accountType": "current",
+      "balance": 0,
+      "accountNumber": 1,
+      "Transactions_array": [],
+      "id": 3
+    },
+    {
+      "fullName": "sdfsdf",
+      "email": "sdfsss@gmail.com",
+      "password": "sdfs",
+      "contact_no": "fsfs",
+      "address": "dfsf",
+      "dob": "fsfsd",
+      "aadhaar": "fdsfs",
+      "accountType": "current",
+      "balance": 0,
+      "accountNumber": 278467,
+      "Transactions_array": [],
+      "id": 4
+    },
+    {
+      "fullName": "dsfsdf",
+      "email": "sdfsdfd@gmail.com",
+      "password": "dfsd",
+      "contact_no": "fsd",
+      "address": "fdss",
+      "dob": "sfsf",
+      "aadhaar": "sfsf",
+      "accountType": "savings",
+      "balance": 0,
+      "accountNumber": 280039,
+      "Transactions_array": [],
+      "id": 5
+    }
+  ]
+}
