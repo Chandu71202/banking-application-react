@@ -1,13 +1,15 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
+import {  useNavigate } from 'react-router-dom';
 
 export default function Register() {
 
+  // Function to Generate a RandomAccountNumber
   function generateAccountNumber() {
     return Math.floor(Math.random() * 1000000) + 100000; 
   }
 
+  // user data to get's saved into the users.json 
   const [user, setUser] = useState({
     fullName: '',
     email: '',
@@ -21,13 +23,19 @@ export default function Register() {
     accountNumber: generateAccountNumber(),
     Transactions_array: []
     });
+    
+  let navigate = useNavigate();
 
+  // Props to check the exisiting email 
   const [emailExists, setEmailExists] = useState(false);
+
+  // To Save the user entered data if there's any register error.
   const handleChange = (e) => {
     const { name, value } = e.target;
     setUser({ ...user, [name]: value });
   };
 
+  // Validates the submit and saves the user's info
   const handleSubmit = (e) => {
     e.preventDefault();
     axios.get(`http://localhost:3500/users?email=${user.email}`)
@@ -38,6 +46,7 @@ export default function Register() {
           axios.post('http://localhost:3500/users', user)
             .then((response) => {
               console.log('User registered successfully:', response.data);
+              navigate('/Login');
             })
             .catch((error) => {
               console.error('Error registering user:', error);
@@ -90,7 +99,7 @@ export default function Register() {
           </select>
         </div>
         <div className="mb-3">
-          <Link type="submit" className="btn btn-primary" to="/Login" onClick={handleSubmit}>Register</Link>
+          <button type="submit" className="btn btn-primary" onClick={(e)=>handleSubmit(e)}>Register</button>
         </div>
       </form>
     </div>
